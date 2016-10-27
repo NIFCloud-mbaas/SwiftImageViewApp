@@ -24,15 +24,18 @@ class ViewController: UIViewController {
     
     // 「Download」ボタン押下時の処理
     @IBAction func download(_ sender: UIBarButtonItem) {
+        // 取得する画像ファイル名を設定
         let imageFile = NCMBFile.file(withName: "mBaaS_image.png", data: nil) as! NCMBFile
+        // 画像ファイルを取得
         imageFile.getDataInBackground({ (data, error) in
             if error != nil {
                 // 取得失敗時の処理
-                print("画像の取得に失敗しました:\(error)")
-                self.label.text = "NG"
+                let err = error as! NSError
+                print("画像ファイルの取得に失敗しました：\(err.code)")
+                self.label.text = "NG エラーコード：\(err.code)"
             } else {
                 // 取得成功時の処理
-                print("画像の取得に成功しました")
+                print("画像ファイルの取得に成功しました")
                 self.label.text = "OK"
                 // 画像を表示する処理
                 self.imageView.image = UIImage(data: data!)
