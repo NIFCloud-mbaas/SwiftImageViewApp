@@ -92,7 +92,7 @@
 
 __画像が表示されない場合__
 * ネットワークを確認してください
-* 画面左下のエラーコードが出ている場合は[こちら](http://mb.cloud.nifty.com/doc/current/rest/common/error.html#REST%20API%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)で確認できます
+* 画面左下にエラーコードが出ている場合は[こちら](http://mb.cloud.nifty.com/doc/current/rest/common/error.html#REST%20API%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)から確認できます
 
 ## 解説
 ここではサンプルアプリに実装済みの内容について紹介します
