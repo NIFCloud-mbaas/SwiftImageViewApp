@@ -106,13 +106,6 @@ __画像が表示されない場合__
 
 #### アップロードした画像ファイルのダウンロード
 ```swift
-//
-//  ViewController.swift
-//  SwiftImageViewApp
-//
-//  Created by Natsumo Ikeda on 2016/10/25.
-//  Copyright © 2016年 NIFTY Corporation. All rights reserved.
-//
 import UIKit
 import NCMB
 
