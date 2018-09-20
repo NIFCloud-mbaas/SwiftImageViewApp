@@ -227,7 +227,7 @@ fi
 			<array>
 				<string>BDB444541DBF52CD007CD26C</string>
 				<string>BDB444511DBF52CD007CD26C</string>
-				<string>BDB4444F1DBF52CD007CD26C</string>;
+				<string>BDB4444F1DBF52CD007CD26C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
