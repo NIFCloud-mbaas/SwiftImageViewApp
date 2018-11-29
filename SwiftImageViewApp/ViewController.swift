@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         imageFile.getDataInBackground({ (data, error) in
             if error != nil {
                 // 取得失敗時の処理
-                let err = error as! NSError
+                let err = error! as NSError
                 print("画像ファイルの取得に失敗しました：\(err.code)")
                 self.label.text = "NG エラーコード：\(err.code)"
             } else {
