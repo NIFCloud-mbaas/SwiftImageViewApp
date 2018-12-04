@@ -95,12 +95,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDB444581DBF52CD007CD26C /* Build configuration list for PBXNativeTarget "SwiftImageViewApp" */;
 			buildPhases = (
+				ED39FA0C314E03C3B437D684 /* [CP] Check Pods Manifest.lock */,
 				6F6E253801992A77D974B098 /* 📦 Check Pods Manifest.lock */,
 				BDB444421DBF52CD007CD26C /* Sources */,
 				BDB444431DBF52CD007CD26C /* Frameworks */,
 				BDB444441DBF52CD007CD26C /* Resources */,
 				B4927682834580B50424A6AE /* 📦 Embed Pods Frameworks */,
-				C22DC11DB5BD9DF99277B223 /* 📦 Copy Pods Resources */,
+				DBAEEF78B15431308C2418CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,19 +190,40 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageViewApp/Pods-SwiftImageViewApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C22DC11DB5BD9DF99277B223 /* 📦 Copy Pods Resources */ = {
+		DBAEEF78B15431308C2418CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageViewApp/Pods-SwiftImageViewApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NCMB/NCMB.framework",
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NCMB.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageViewApp/Pods-SwiftImageViewApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageViewApp/Pods-SwiftImageViewApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED39FA0C314E03C3B437D684 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftImageViewApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

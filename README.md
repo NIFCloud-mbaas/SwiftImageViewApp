@@ -16,12 +16,13 @@
 * Mac OS X 10.12(Sierra)
 * Xcode ver. 8.0
 * Simulator ver. 10.0
- * iPhone7
+   * iPhone7
+* iOS SDK v3
 
 ※上記内容で動作確認をしています。
 
 ## 手順
-### 1. [ ニフクラ mobile backend ](https://mbaas.nifcloud.com/)の会員登録・ログインとアプリの新規作成
+### 1. [ ニフクラ mobile backend ](https://mbaas.nifcloud.com/signup.htm)の会員登録・ログインとアプリの新規作成
 * 上記リンクから会員登録（無料）をします。登録ができたらログインをすると下図のように「アプリの新規作成」画面が出るのでアプリを作成します
 
 ![画像3](/readme-img/003.png)
@@ -33,12 +34,12 @@
 
 ### 2. GitHubからサンプルプロジェクトのダウンロード
 * 下記リンクをクリックしてプロジェクトをMacにダウンロードします
- * __[SwiftImageViewApp](https://github.com/natsumo/SwiftImageViewApp/archive/master.zip)__
+  * __[SwiftImageViewApp](https://github.com/NIFCloud-mbaas/SwiftImageViewApp/archive/master.zip)__
 
  ※この中にはプロジェクトと別に、「setting」フォルダが入っています。この中にある画像を後ほどアップロードして使用します。
 
 ### 3. Xcodeでアプリを起動
-* ダウンロードしたフォルダを開き、「`SwiftImageViewApp.xcodeproj`」をダブルクリックしてXcode開きます
+* ダウンロードしたフォルダを開き、「`SwiftImageViewApp.xcworkspace`」をダブルクリックしてXcode開きます
 
 ![画像9](/readme-img/009.png)
 
@@ -55,8 +56,8 @@
 ![画像7](/readme-img/007.png)
 
 * それぞれ`YOUR_NCMB_APPLICATION_KEY`と`YOUR_NCMB_CLIENT_KEY`の部分を書き換えます
- * このとき、ダブルクォーテーション（`"`）を消さないように注意してください！
- * 書き換え終わったら`command + s`キーで保存をします
+  * このとき、ダブルクォーテーション（`"`）を消さないように注意してください！
+  * 書き換え終わったら`command + s`キーで保存をします
 
 ### 5. 画像ファイルのアップロード
 * [ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボードで、「ファイルストア」を開きます
@@ -65,7 +66,7 @@
 ![画像12](/readme-img/012.png)
 
 * 画像を選択します
- * ここでアップロードする画像はダウンロードしたプロジェクトにある「setting」フォルダ内の「__mBaaS_image.png__」ファイルです。
+  * ここでアップロードする画像はダウンロードしたプロジェクトにある「setting」フォルダ内の「__mBaaS_image.png__」ファイルです。
 
 ![画像15](/readme-img/015.png)
 
@@ -79,7 +80,7 @@
 
 ### 6. 動作確認と解説
 * Xcode画面の左上、適当なSimulatorを選択します
- * iPhone7の場合は以下のようになります
+  * iPhone7の場合は以下のようになります
 * 実行ボタン（さんかくの再生マーク）をクリックします
 * アプリが起動します
 
@@ -99,7 +100,7 @@ __画像が表示されない場合__
 
 ### SDKのインポートと初期設定
 * ニフクラ mobile backend のドキュメント（クイックスタート）をSwift版に書き換えたドキュメントをご用意していますので、ご活用ください
- * [SwiftでmBaaSを始めよう！(＜CocoaPods＞でuse_framewoks!を有効にした方法)](http://qiita.com/natsumo/items/57d3a4d9be16b0490965)
+  * [SwiftでmBaaSを始めよう！(＜CocoaPods＞でuse_framewoks!を有効にした方法)](http://qiita.com/natsumo/items/57d3a4d9be16b0490965)
 
 ### ロジック
 * `Main.storyboard`でデザインを作成し、`ViewController.swift`にロジックを書いています
@@ -151,4 +152,4 @@ class ViewController: UIViewController {
 
 ## 参考
 * 同じ内容の【Objective-C】版もご用意しています
- * https://github.com/NIFCloud-mbaas/ObjcImageViewApp
+  * https://github.com/NIFCloud-mbaas/ObjcImageViewApp
