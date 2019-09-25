@@ -25,26 +25,26 @@ class ViewController: UIViewController {
     // 「Download」ボタン押下時の処理
     @IBAction func download(_ sender: UIBarButtonItem) {
         // 取得する画像ファイル名を設定
-        let imageFile = NCMBFile.file(withName: "mBaaS_image.png", data: nil) as! NCMBFile
+        let imageFile : NCMBFile = NCMBFile(fileName: "mBaaS_image.png")
         // 画像ファイルを取得
-        imageFile.getDataInBackground({ (data, error) in
-            if error != nil {
-                // 取得失敗時の処理
-                let err = error as! NSError
-                print("画像ファイルの取得に失敗しました：\(err.code)")
-                self.label.text = "NG エラーコード：\(err.code)"
-            } else {
+        imageFile.fetchInBackground(callback: { result in
+            switch result {
+            case let .success(data):
                 // 取得成功時の処理
                 print("画像ファイルの取得に成功しました")
-                self.label.text = "OK"
-                // 画像を表示する処理
-                self.imageView.image = UIImage(data: data!)
-                
+                DispatchQueue.main.async {
+                    self.label.text = "OK"
+                    // 画像を表示する処理
+                    self.imageView.image = UIImage(data: data!)
+                }
+            case let .failure(error):
+                print("画像ファイルの取得に失敗しました：\(error)")
+                DispatchQueue.main.async {
+                    self.label.text = "NG エラーコード：\(error)"
+                }
+                return;
             }
-
-        }) { (num) in
-                self.label.text = "\(num)%"
-        }
+        })
     }
     
     override func didReceiveMemoryWarning() {
