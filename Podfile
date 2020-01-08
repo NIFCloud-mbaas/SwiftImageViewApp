@@ -6,7 +6,7 @@ target 'SwiftImageViewApp' do
     use_frameworks!
     
     # Pods for SwiftImageViewApp
-    pod 'NCMB', :git => 'https://github.com/NIFCloud-mbaas/ncmb_swift'
+    pod 'NCMB', :git => 'https://github.com/NIFCLOUD-mbaas/ncmb_swift'
     
 end
 
