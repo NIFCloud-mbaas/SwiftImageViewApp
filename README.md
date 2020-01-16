@@ -97,7 +97,7 @@ __画像が表示されない場合__
 ここではサンプルアプリに実装済みの内容について紹介します
 
 ### SDKのインポートと初期設定
-* [ニフクラmobile backend のドキュメント（クイックスタート](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_swift.html) をSwift版に書き換えたドキュメントをご用意していますので、ご活用ください
+* [ニフクラmobile backend のドキュメント（クイックスタート)](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_swift.html) をSwift版に書き換えたドキュメントをご用意していますので、ご活用ください
 
 ### ロジック
 * `Main.storyboard`でデザインを作成し、`ViewController.swift`にロジックを書いています
