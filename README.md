@@ -13,10 +13,10 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS X 10.12(Sierra)
-* Xcode ver. 8.0
-* Simulator ver. 10.0
- * iPhone7
+* Mac OS 10.15(Catalina)
+* Xcode ver. 12.0
+* Simulator ver.12.0
+* iPhone11 (iOS14.0)
 
 ※上記内容で動作確認をしています。
 
